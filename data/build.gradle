@@ -1,0 +1,14 @@
+apply plugin: 'kotlin'
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation project(':domain')
+	implementation deps.kotlin.stdlib
+	implementation deps.reactiveX.rxKotlin
+	implementation deps.retrofit.runtime
+	implementation deps.retrofit.adapter_rxjava
+	implementation deps.gson
+}

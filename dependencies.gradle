@@ -1,0 +1,91 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.calligraphy = "2.3.0"
+versions.kotlin = "1.2.50"
+versions.support = "27.1.1"
+versions.constraintLayout = "1.0.2"
+versions.retrofit = "2.4.0"
+versions.rxJava2 = "2.1.1"
+versions.rxKotlin = "2.2.0"
+versions.rxAndroid = "2.1.0"
+versions.gson = "2.8.2"
+versions.okhttp = "3.11.0"
+versions.dagger = "2.8"
+versions.materialDialogs = "0.9.6.0"
+versions.junit = "4.12-beta-3"
+versions.androidTestRunner = "1.0.1"
+versions.espresso_core = "3.0.1"
+versions.timber = "4.7.1"
+versions.mockito = "2.18.0"
+versions.mockito_inline = "2.7.13"
+versions.butterknife = "8.8.1"
+versions.picasso = "2.71828"
+
+def deps = [:]
+
+def support = [:]
+support.annotations = "com.android.support:support-annotations:$versions.support"
+support.app_compat = "com.android.support:appcompat-v7:$versions.support"
+support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
+support.cardview = "com.android.support:cardview-v7:$versions.support"
+support.design = "com.android.support:design:$versions.support"
+support.v4 = "com.android.support:support-v4:$versions.support"
+support.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraintLayout"
+support.multidex = "com.android.support:multidex:1.0.3"
+deps.support = support
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+retrofit.converter_gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.runtime_mock = "com.squareup.retrofit2:retrofit-mock:$versions.retrofit"
+deps.retrofit = retrofit
+
+def okhttp = [:]
+okhttp.runtime = "com.squareup.okhttp3:okhttp:$versions.okhttp"
+okhttp.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+okhttp.urlconnection = "com.squareup.okhttp3:okhttp-urlconnection:$versions.okhttp"
+deps.okhttp = okhttp
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.dagger_compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+deps.dagger = dagger
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+deps.kotlin = kotlin
+
+def reactiveX = [:]
+reactiveX.rxKotlin = "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin"
+reactiveX.rxAndroid = "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
+deps.reactiveX = reactiveX
+
+def test = [:]
+test.junit = "junit:junit:$versions.junit"
+test.mockito_core = "org.mockito:mockito-core:$versions.mockito"
+test.android_test_runner = "com.android.support.test:runner:$versions.androidTestRunner"
+test.mockito_inline = "org.mockito:mockito-inline:$versions.mockito_inline"
+test.espresso_core = "com.android.support.test.espresso:espresso-core:$versions.espresso_core"
+deps.test = test
+
+//general libraries
+deps.calligraphy = "uk.co.chrisjenx:calligraphy:$versions.calligraphy"
+deps.gson = "com.google.code.gson:gson:$versions.gson"
+deps.material_dialogs_commons = "com.afollestad.material-dialogs:commons:$versions.materialDialogs"
+deps.material_dialogs_core = "com.afollestad.material-dialogs:core:$versions.materialDialogs"
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"
+deps.butterknife = "com.jakewharton:butterknife:$versions.butterknife"
+deps.butterknife_compiler = "com.jakewharton:butterknife-compiler:$versions.butterknife"
+deps.picasso = "com.squareup.picasso:picasso:$versions.picasso"
+
+def build_versions = [:]
+build_versions.min_sdk = 17
+build_versions.target_sdk = 27
+build_versions.compile_sdk = 27
+build_versions.build_tools = "27.0.3"
+ext.build_versions = build_versions
+
+ext.deps = deps
